@@ -3,7 +3,7 @@ if ("webkitSpeechRecognition" in window) {
   let final_transcript = "";
 
   speechRecognition.continuous = true;
-  speechRecognition.interimResults = true;
+  speechRecognition.interimResults = false;
   speechRecognition.lang = document.querySelector("#select_dialect").value;
 
   speechRecognition.onstart = () => {
