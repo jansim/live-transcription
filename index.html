@@ -15,20 +15,22 @@
     />
     <title>Speech To Text</title>
   </head>
-  <body class="container pt-5 bg-dark">
-    <div class="mt-4" class="controls">
-      <h2 class="mb-3 text-light">Select Language</h2>
-      <select class="form-select bg-secondary text-light" id="select_language" onchange="updateCountry()"></select>
-      <select class="form-select bg-secondary text-light mt-2" id="select_dialect"></select>
-      <button class="btn btn-success" id="start">Start</button>
-      <button class="btn btn-danger" id="stop">Stop</button>
-      <p id="status" class="lead mt-3 text-light" style="display: none">Listenting ...</p>
-    </div>
-    <div class="py-3 transcript">
-      <h2 class="mt-4 text-light">Transcript</h2>
-      <div class="transcript-text">
+  <body class="bg-dark">
+    <div class="container py-5">
+      <div class="mt-4" class="controls">
+        <h2 class="mb-3 text-light">Select Language</h2>
+        <select class="form-select bg-secondary text-light" id="select_language" onchange="updateCountry()"></select>
+        <select class="form-select bg-secondary text-light mt-2" id="select_dialect"></select>
+        <button class="btn btn-success" id="start">Start</button>
+        <button class="btn btn-danger" id="stop">Stop</button>
+        <p id="status" class="lead mt-3 text-light" style="display: none">Listenting ...</p>
+      </div>
+      <div class="py-3 transcript">
+        <h2 class="mt-4 text-light">Transcript</h2>
+        <div class="transcript-text">
         <div id="final" class="text-light"></div>
         <div id="interim" class="text-secondary"></div>
+        </div>
       </div>
     </div>
   </body>
