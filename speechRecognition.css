@@ -1,0 +1,4 @@
+.sr-running #div_language,
+.sr-running #div_controls {
+  display:none;
+}

@@ -9,6 +9,9 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     >
+    <link
+      href="speechRecognition.css"
+      rel="stylesheet"
     />
     <title>Speech To Text</title>
   </head>
@@ -23,7 +26,7 @@
       <div id="final" class="text-light"></div>
       <div id="interim" class="text-secondary"></div>
     </div>
-    <div class="mt-4">
+    <div class="mt-4" id="div_controls">
       <button class="btn btn-success" id="start">Start</button>
       <button class="btn btn-danger" id="stop">Stop</button>
       <p id="status" class="lead mt-3 text-light" style="display: none">Listenting ...</p>

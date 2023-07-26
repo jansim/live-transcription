@@ -6,6 +6,7 @@ if ("webkitSpeechRecognition" in window) {
   speechRecognition.lang = document.querySelector("#select_dialect").value;
 
   speechRecognition.onstart = () => {
+    document.documentElement.classList.add('sr-running')
     document.querySelector("#status").style.display = "block";
   };
   speechRecognition.onerror = () => {
@@ -14,6 +15,7 @@ if ("webkitSpeechRecognition" in window) {
   };
   speechRecognition.onend = () => {
     document.querySelector("#status").style.display = "none";
+    document.documentElement.classList.remove('sr-running')
     console.log("Speech Recognition Ended");
   };
 
