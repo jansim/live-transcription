@@ -6,8 +6,19 @@
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "."
-    ".";
+    "controls"
+    "transcript";
+}
+
+.transcript {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "title"
+    "text";
+  grid-area: transcript;
 }
 
 .transcript .transcript-text {
