@@ -1,6 +1,5 @@
 if ("webkitSpeechRecognition" in window) {
   let speechRecognition = new webkitSpeechRecognition();
-  let final_transcript = "";
 
   speechRecognition.continuous = true;
   speechRecognition.interimResults = false;
@@ -20,6 +19,7 @@ if ("webkitSpeechRecognition" in window) {
 
   speechRecognition.onresult = (event) => {
     let interim_transcript = "";
+    let final_transcript = "";
 
     for (let i = event.resultIndex; i < event.results.length; ++i) {
       if (event.results[i].isFinal) {
@@ -28,7 +28,13 @@ if ("webkitSpeechRecognition" in window) {
         interim_transcript += event.results[i][0].transcript;
       }
     }
-    document.querySelector("#final").innerHTML = final_transcript;
+
+    const textNode = document.createTextNode(final_transcript);
+    const paragraph = document.createElement("p");
+    paragraph.appendChild(textNode);
+    document.querySelector("#final").appendChild(paragraph);
+    paragraph.scrollIntoView();
+
     document.querySelector("#interim").innerHTML = interim_transcript;
   };
 
