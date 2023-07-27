@@ -47,6 +47,10 @@ if ("webkitSpeechRecognition" in window) {
   document.querySelector("#stop").onclick = () => {
     speechRecognition.stop();
   };
+  document.querySelector("#clear").onclick = () => {
+    document.querySelector("#final").innerHTML = '';
+    document.querySelector("#interim").innerHTML = '';
+  };
 } else {
   console.log("Speech Recognition Not Available");
 }
