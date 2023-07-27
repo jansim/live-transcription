@@ -10,6 +10,10 @@
       crossorigin="anonymous"
     >
     <link
+      href="https://cdn.jsdelivr.net/npm/@fontsource/atkinson-hyperlegible@5.0.5/400.min.css"
+      rel="stylesheet"
+    >
+    <link
       href="speechRecognition.css"
       rel="stylesheet"
     />
@@ -17,16 +21,16 @@
   </head>
   <body class="bg-dark">
     <div class="container py-5">
-      <div class="mt-4" class="controls">
-        <h2 class="mb-3 text-light">Select Language</h2>
+      <div class="controls">
+        <h2 class="my-3">Controls</h2>
         <select class="form-select bg-secondary text-light" id="select_language" onchange="updateCountry()"></select>
         <select class="form-select bg-secondary text-light mt-2" id="select_dialect"></select>
         <button class="btn btn-success" id="start">Start</button>
         <button class="btn btn-danger" id="stop">Stop</button>
         <p id="status" class="lead mt-3 text-light" style="display: none">Listenting ...</p>
       </div>
-      <div class="py-3 transcript">
-        <h2 class="mt-4 text-light">Transcript</h2>
+      <div class="pt-3 transcript">
+        <h2 class="my-3">Transcript</h2>
         <div class="transcript-text">
         <div id="final" class="text-light"></div>
         <div id="interim" class="text-secondary"></div>

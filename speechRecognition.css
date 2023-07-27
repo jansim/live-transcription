@@ -1,3 +1,5 @@
+/* Overall page layout */
+
 .container {
   height: 100vh;
   display: grid;
@@ -23,11 +25,30 @@
 }
 
 .transcript .transcript-text {
-  border: 1px solid gray;
-  min-height: 300px;
-  border-radius: 8px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
+
+/* Typography */
+
+body {
+  font-family: 'Atkinson Hyperlegible';
+}
+
+h1, h2 {
+  font-size: 1rem;
+  font-variant-caps: all-small-caps;
+  color: var(--bs-secondary);
+}
+
+.transcript-text {
+  font-size: 5rem;
+  line-height: 1.25;
+}
+
+.transcript-text p {
+  margin: 3rem 0;
+}
+
