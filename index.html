@@ -4,28 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
+    >
+    <link
+      href="https://cdn.jsdelivr.net/npm/@fontsource/atkinson-hyperlegible@5.0.5/400.min.css"
+      rel="stylesheet"
+    >
+    <link
+      href="speechRecognition.css"
+      rel="stylesheet"
     />
     <title>Speech To Text</title>
   </head>
-  <body class="container pt-5 bg-dark">
-    <div class="mt-4" id="div_language">
-      <h2 class="mb-3 text-light">Select Language</h2>
-      <select class="form-select bg-secondary text-light" id="select_language" onchange="updateCountry()"></select>
-      <select class="form-select bg-secondary text-light mt-2" id="select_dialect"></select>
-    </div>
-    <h2 class="mt-4 text-light">Transcript</h2>
-    <div class="p-3" style="border: 1px solid gray; height: 300px; border-radius: 8px; overflow: scroll;">
-      <div id="final" class="text-light"></div>
-      <div id="interim" class="text-secondary"></div>
-    </div>
-    <div class="mt-4">
-      <button class="btn btn-success" id="start">Start</button>
-      <button class="btn btn-danger" id="stop">Stop</button>
-      <p id="status" class="lead mt-3 text-light" style="display: none">Listenting ...</p>
+  <body class="bg-dark">
+    <div class="container py-5">
+      <div class="controls">
+        <details>
+          <summary>
+            <h2 class="mb-3">Controls</h2>
+          </summary>
+          <select class="form-select bg-secondary text-light my-2" id="select_language" onchange="updateCountry()"></select>
+          <select class="form-select bg-secondary text-light my-2 mb-3" id="select_dialect"></select>
+          <button class="btn btn-success" id="start">Start</button>
+          <button class="btn btn-danger" id="stop">Stop</button>
+          <button class="btn btn-warning" id="clear">Clear</button>
+          <p id="status" class="lead mt-3 text-light" style="display: none">Listenting ...</p>
+        </details>
+      </div>
+      <div class="pt-3 transcript">
+        <h2 class="my-3">Transcript</h2>
+        <div class="transcript-text">
+          <div class="gradient-overlay"></div>
+          <div id="final" class="text-light"></div>
+          <div id="interim" class="text-secondary"></div>
+        </div>
+      </div>
     </div>
   </body>
   <script src="./speechRecognition.js"></script>
