@@ -29,6 +29,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  position: relative; /* for gradient overlay */
 }
 
 /* Typography */
@@ -52,3 +53,15 @@ h1, h2 {
   margin: 3rem 0;
 }
 
+.transcript-text .gradient-overlay {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  background-image: linear-gradient(
+    180deg,
+    rgba(var(--bs-dark-rgb)) 0%,
+    transparent 100%
+  );
+  height: 3rem;
+  width: 100%;
+}
